@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dashboard</title>
+    <link rel="stylesheet" href="../css/dashstyle.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <script src="../js/deshscript.js" defer></script>
+<script>
+        function setCourseAndRedirect(courseName) {
+            // Set the course name in the hidden form and submit it
+            document.getElementById('course_name').value = courseName;
+            document.getElementById('courseForm').submit();
+        }
+    </script>
+  </head>
+  <body>
+  <form id="courseForm" method="POST" style="display: none;">
+        <input type="hidden" name="course_name" id="course_name">
+    </form>
+    <nav>
+      <div class="logo">
+        <h2>TUTOR EASE</h2>
+      </div>
+      <div class="menu">
+        <a href="" class="" id="">dashboard </a>
+      </div>
+      <div class="login">
+        <a href="">help</a>
+        <a href="../../backend/account.php" id="user"> Y </a>
+      </div>
+    </nav>
+    <div class="section-1">
+      <div class="main">
+       <div class="welcome">
+        <img src="" alt="">
+        <h2>Welcome</h2>
+        <p>Welcome to your dashboard, here you can track your progress and access all the resources you need to excel in your class.</p>
+       </div>
+       <div class="cooo">
+          <div id="Atprogressbar">
+            <div id="progressvalue">0%</div>
+          </div>
+          <div class="btn"> 
+            <button id="increaseButton" data-subject-id="1">Done</button>
+          </div>
+        </div>
+      </div>
+      <div class="anime">
+        <img src="../assets/images/courseicons/elearning.gif" alt="">
+      </div>
+    </div>
+    <div class="section-2">
+      <div class="catagor-container">
+        <div class="catagor">
+          <a href="" id="fresh">Fresh man class </a>
+        </div>
+        <div class="catagor">
+          <a href="" id="pre">pre-engineering class</a>
+        </div>
+      </div>
+    </div>
+    <div class="content-head">
+      <div><h2 id="heading-fresh">Fresh-man</h2></div>
+      <div><h2 id="heading-pre">Pre-engineering</h2></div>
+    </div>
+    <section class="course-container">
+      <div class="lower-container" id="content1">
+        <div class="course-list">
+          <div class="list-course">
+            <img src="../assets/images/courseicons/english.png" alt="english" title="English" />
+            <h2><a href="#" onclick="setCourseAndRedirect('English')">english Communication</a></h2>
+          </div>
+          <div class="list-course">
+            <img src="../assets/images/courseicons/math.png" alt="logic" title="Logic" />
+            <h2><a href="#" onclick="setCourseAndRedirect('maths')">maths</a></h2>
+          </div>
+          <div class="list-course">
+            <img src="../assets/images/courseicons/psycology.png" alt="psychology" title="Psychology" />
+            <h2><a href="#" onclick="setCourseAndRedirect('psychology')">psychology</a></h2>
+          </div>
+          <div class="list-course">
+            <img src="../assets/images/courseicons/geography.png" alt="geography" title="Geography" />
+            <h2><a href="#" onclick="setCourseAndRedirect('Geography')">Geography</a></h2>
+          </div>
+          <div class="list-course">
+            <img src="../assets/images/courseicons/einstein.png" alt="maths" title="Maths" />
+            <h2><a href="#" onclick="setCourseAndRedirect('physics')">physics</a></h2>
+          </div>
+          <div class="list-course">
+            <img src="../assets/images/courseicons/logic.png" alt="civic" title="CIVIC" />
+            <h2><a href="#" onclick="setCourseAndRedirect('logic')">logic</a></h2>
+          </div>
+
+          <div class="list-course">
+            <img src="../assets/images/courseicons/inclusive.png" alt="physics" title="Physics" />
+            <h2><a href="#" onclick="setCourseAndRedirect('inclusivness')">inclusivness</a></h2>
+          </div>
+          <div class="list-course">
+            <img src="../assets/images/courseicons/economic.png" alt="economics" title="Economics" />
+            <h2><a href="#" onclick="setCourseAndRedirect('economics')">economics</a></h2>
+          </div>
+        </div>
+        <div class="side">
+          <a href="../../backend/references.php" >PPT AND PDFs</a>
+          <a href="../../backend/quiz_home.php"> Quizes </a>
+          <a href="" onclick="setCourseAndRedirect('English2')">Video </a>
+          <a href="../html/index.html">home</a>
+        </div>
+      </div>
+
+      <div class="lower-container" id="content2">
+        <div class="course-list">
+          <div class="list-course">
+            <img src="../assets/images/courseicons/english.png" alt="english" title="English" />
+            <h2><a href="#" onclick="setCourseAndRedirect('English2')">English II</a></h2>
+          </div>
+          <div class="list-course">
+          <img src="../assets/images/courseicons/apllied.png" alt="logic" title="Logic" />            <h2><a href="#" onclick="setCourseAndRedirect('Applied2')">Applied 2</a></h2>
+          </div>
+          <div class="list-course">
+          <img src="../assets/images/courseicons/antropology.png" alt="psychology" title="Psychology" />            <h2><a href="#" onclick="setCourseAndRedirect('Anthropology')">Anthropology</a></h2>
+          </div>
+          <div class="list-course">
+          <img src="../assets/images/courseicons/technologies.png" alt="geography" title="Geography" />            <h2><a href="#" onclick="setCourseAndRedirect('Emerging')">Emerging Technologies</a></h2>
+          </div>
+          <div class="list-course">
+          <img src="../assets/images/courseicons/entrepreneurship.png" alt="maths" title="Maths" />
+            <h2><a href="#" onclick="setCourseAndRedirect('Entrepreneurship')">Entrepreneurship</a></h2>
+          </div>
+          <div class="list-course">
+          <img src="../assets/images/courseicons/civic.png" alt="civic" title="CIVIC" />
+            <h2><a href="#" onclick="setCourseAndRedirect('Civics')">Civics</a></h2>
+          </div>
+
+          <div class="list-course">
+          <img src="../assets/images/courseicons/c++.png" alt="physics" title="Physics" />
+            <h2><a href="#" onclick="setCourseAndRedirect('programming')">Computer programming </a></h2>
+          </div>
+          <div class="list-course">
+          <img src="../assets/images/courseicons/globaltrend.png" alt="economics" title="Economics" />
+            <h2><a href="#" onclick="setCourseAndRedirect('global')">global trend</a></h2>
+          </div>
+        </div>
+        <div class="side">
+          <a href="">PPT AND PDFs</a>
+          <a href=""> Quizes </a>
+          <a href=""> videoa </a>
+          <a href="">home</a>
+        </div>
+      </div>
+    </section> 
+    <section class="foot">
+      <footer class="footer">
+        <div class="main-foot1">
+          <div class="foot-part head">
+            <h2>tutor-ease</h2>
+          </div>
+          <div class="foot-part head">
+            <a href="#home"> JOIN US</a>
+          </div>
+        </div>
+        <div class="main-foot2">
+          <div class="foot-part">
+            <h2>pages</h2>
+          </div>
+          <div class="foot-part">
+           <h2>Featured</h2>
+          </div>
+          <div class="foot-part">
+            <h2>Contact us</h2>
+          </div>
+          <div class="foot-part">
+            <h2>Conect with us</h2>
+          </div>
+        </div>
+        <div class="main-foot3">
+          <div class="foot-part links">
+            <a href="aboutus.html">About Us</a>
+            <a href="ourcourses.html">Services</a>
+            <a href="https://t.me/tutuoreaset">Contact</a>
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+          </div>
+          <div class="foot-part links">
+            <a href="#blog">resources</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#team">Our Team</a>
+            <a href="#careers">Careers</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <div class="foot-part links">
+            <a href="login.html">sign-up</a>
+            <a href="login.html">login</a>
+            <a href="https://t.me/tutuorease">Events</a>
+            <a href="https://t.me/tutuorease">Support</a>
+            <a href="https://t.me/tutuorease">Community</a>
+          </div>
+          <div class="foot-part links icons">
+            <div class="foot-part links icons">
+            <a href="https://web.facebook.com/?_rdc=1&_rdr#" title="Newsletter Signup">
+              <img src="../assets/icons/facebook.png" alt="" height="50" width="50">
+            </a>
+            <a href="https://www.x.com/" title="Sitemap">
+              <img src="../assets/icons/twitter.png" alt="" height="30" width="30">
+            </a>
+            <a href="https://www.instagram.com/" title="Advertising">
+              <img src="../assets/icons/instagram.png" alt="" height="40" width="40">
+            </a>
+            <a href="https://www.linkedin.com/login" title="Partners">
+              <img src="../assets/icons/linkedin.png" alt="" height="30" width="30">
+            </a>
+            <a href="https://www.youtube.com/" title="Feedback">
+              <img src="../assets/icons/youtube.png" alt="" height="30" width="30">
+            </a>
+          </div>
+          </div>
+        </div>
+        <div class="main-foot4">
+          <p>&copy; 2025 Tutor-Ease. All rights reserved.</p>
+          <p>
+            <a href="" id="foot"></a>
+            <a href="#privacy">Privacy Policy</a> |
+            <a href="#terms">Terms of Service</a> |
+            <a href="#disclaimer">Disclaimer</a>
+          </p>
+        </div>
+      </footer>
+    </section>
+
+    <section class="foot1">
+      <footer class="footer">
+        <div class="main-foot1">
+          <div class="foot-part head">
+            <h2>tutor-ease</h2>
+          </div>
+          <div class="foot-part head">
+            <a href="#home"> JOIN US</a>
+          </div>
+        </div>
+        <div class="main-foot3">
+          <div class="foot-part links">
+            <h2>pages</h2>
+            <a href="aboutus.html">About Us</a>
+            <a href="ourcourses.html">Services</a>
+            <a href="https://t.me/tutuoreaset">Contact</a>
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+          </div>
+          <div class="foot-part links">
+            <h2>Featured</h2>
+            <a href="#blog">resources</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#team">Our Team</a>
+            <a href="#careers">Careers</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <div class="foot-part links">
+            <h2>contact us</h2>
+            <a href="login.html">sign-up</a>
+            <a href="login.html">login</a>
+            <a href="https://t.me/tutuorease">Events</a>
+            <a href="https://t.me/tutuorease">Support</a>
+            <a href="https://t.me/tutuorease">Community</a>
+          </div>
+          </div>
+          <div class="foot-part links icons">
+            <h2>connect with us </h2>
+            <a href="https://web.facebook.com/?_rdc=1&_rdr#" title="Newsletter Signup">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.x.com/" title="Sitemap">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/" title="Advertising">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/login" title="Partners">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.youtube.com/" title="Feedback">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+        <div class="main-foot4">
+          <p>&copy; 2025 Tutor-Ease. All rights reserved.</p>
+          <p>
+            <a href="" id="foot"></a>
+            <a href="#privacy">Privacy Policy</a> 
+            <a href="#terms">Terms of Service</a> 
+            <a href="#disclaimer">Disclaimer</a>
+          </p>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>
