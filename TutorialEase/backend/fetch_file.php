@@ -16,9 +16,8 @@ if (isset($_GET['id'])) {
     $id = intval($_GET['id']);
     
     
-    $stmt = $conn->prepare("SELECT cm.pdf_data, cm.html_content, cm.file_type, cm.title 
-                           FROM course_materials cm 
-                           WHERE cm.id = ?");
+    $stmt = $conn->prepare("SELECT cm.pdf_data, cm.html_content, cm.file_type, cm.title FROM course_materials cm WHERE cm.id = ?");
+    
     $stmt->bind_param("i", $id);
     $stmt->execute();
     $stmt->store_result();
@@ -34,6 +33,7 @@ if (isset($_GET['id'])) {
             header('Content-Type: application/pdf');
             header('Content-Disposition: inline; filename="' . urlencode($title) . '.pdf"');
             header('Content-Length: ' . strlen($pdf_data));
+
             echo $pdf_data;
         } else {
             if (empty($html_content)) {
