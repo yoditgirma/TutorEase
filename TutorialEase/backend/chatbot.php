@@ -1,5 +1,10 @@
 <?php
 
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
+
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");
 
@@ -25,8 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($data['question'])) {
             $messages[] = $m;
         }
 
-        
-        $responseText = callOpenRouter('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', $messages);
+       $api_key = $_ENV['API_KEY'];
+        $responseText = callOpenRouter($api_key, $messages);
 
         $_SESSION['chat_history'][] = ['role' => 'assistant', 'content' => $responseText];
 
